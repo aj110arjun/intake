@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'school_form' %}">Add School</a>
+
+     {% for s in school %}
+        <div>
+            <h2>Student: {{ s.student.name }}</h2>
+            <h2>Employee: {{ s.employee.first_name }} {{ s.employee.last_name }}</h2>
+            <h2>Product: {{ s.product.name }}</h2>
+            <h2>Contact: {{ s.contact.name }}</h2>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
